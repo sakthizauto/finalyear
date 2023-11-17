@@ -1,0 +1,64 @@
+<div class="stock-market-dashboard-container"
+    style="height: 100vh; display: flex; flex-direction: column; background-color: #2c3e50; color: #fff;">
+
+    <!-- Header Section -->
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="display-4">Stock Market Dashboard</h1>
+            <p class="lead">Monitor and analyze stock market trends.</p>
+        </div>
+    </div>
+
+    <!-- Stock Cards Section -->
+    <div class="row flex-grow-1 mt-4">
+        <!-- Marketplace Section -->
+        <div class="col-md-4">
+            <div class="card bg-dark rounded text-light">
+                <div class="card-body">
+                    <h5 class="card-title">Temporal Marketplace</h5>
+                    <p class="card-text">Explore and acquire items from different timelines.</p>
+                    <a routerLink="/marketplace" class="btn btn-info">Enter Marketplace</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Section -->
+        <div class="col-md-4">
+            <div class="card bg-dark rounded text-light shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Your Portfolio</h5>
+                    <p class="card-text">Review and manage your stock investments.</p>
+                    <a routerLink="/portfolio" class="btn btn-info">View Portfolio</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Market Trends Section -->
+        <div class="col-md-4">
+            <div class="card bg-dark rounded text-light shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Market Trends</h5>
+                    <p class="card-text">Stay updated with the latest stock market trends.</p>
+                    <a routerLink="/ai-advisor" class="btn btn-info"> Ai </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer-container bg-info text-light mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2023 Stock Market Dashboard. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-12">
+        <router-outlet></router-outlet>
+    </div>
+</div>

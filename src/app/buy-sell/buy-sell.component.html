@@ -1,0 +1,36 @@
+<!-- Import Bootstrap CSS in your project (add this to your index.html) -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+<!-- Updated HTML with Bootstrap classes -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Indian Stocks</h2>
+            <ul class="list-group">
+                <li *ngFor="let stock of stocks"
+                    class="list-group-item d-flex justify-content-between align-items-center">
+                    {{ stock.name }} - ₹{{ stock.price }}
+                    <button class="btn btn-primary" (click)="addToCart(stock)">Add to Cart</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <h2>Cart</h2>
+            <ul class="list-group">
+                <li *ngFor="let stock of cart"
+                    class="list-group-item d-flex justify-content-between align-items-center">
+                    {{ stock.name }} - ₹{{ stock.price }}
+                    <button class="btn btn-danger" (click)="removeFromCart(stock)">Remove from Cart</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <button class="btn btn-success" (click)="buy()">Buy</button>
+        </div>
+    </div>
+</div>

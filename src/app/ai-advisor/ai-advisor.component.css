@@ -1,0 +1,64 @@
+.financial-advisor-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #3498db;
+    text-align: center;
+}
+
+.chat-container {
+    margin-top: 20px;
+    overflow-y: auto;
+    max-height: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.user-message {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.advisor-message {
+    background-color: #ecf0f1;
+    color: #34495e;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.user-input-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.ask-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ask-button:hover {
+    background-color: #2980b9;
+}
