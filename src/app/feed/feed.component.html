@@ -1,0 +1,30 @@
+<!-- feed.component.html -->
+<!-- feed.component.html -->
+<div class="feed-container">
+    <!-- Form for creating a new post -->
+    <form (submit)="submitPost()" class="post-form">
+        <div class="user-profile">
+            <img src="{{ userProfile.picture }}" alt="Profile Picture">
+            <input type="text" [(ngModel)]="newPost.text" name="text" placeholder="What's on your mind?" required>
+            <button type="submit">Post</button>
+        </div>
+
+    </form>
+
+    <!-- Display posts -->
+    <div *ngFor="let post of posts" class="post" [@fadeInOut]="post.liked ? 'in' : 'out'">
+        <div class="post-header">
+            <div class="user-profile">
+                <img src="{{ post.userProfile.picture }}" alt="Profile Picture">
+                <p class="username">{{ post.userProfile.username }}</p>
+            </div>
+        </div>
+        <div class="post-content">
+            <p>{{ post.text }}</p>
+        </div>
+        <div class="post-actions">
+            <button (click)="likePost(post)">Like</button>
+            <button (click)="commentOnPost(post)">Comment</button>
+        </div>
+    </div>
+</div>

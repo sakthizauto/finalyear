@@ -1,15 +1,19 @@
-<div class="financial-advisor-container">
-    <h1>Financial Insights Chat</h1>
+<div>
+    <div class="financial-advisor-container">
 
-    <div class="chat-container">
-        <div *ngFor="let message of messages"
-            [ngClass]="message.sender === 'user' ? 'user-message' : 'advisor-message'">
-            {{ message.content }}
+        <h1>Financial Insights Chat</h1>
+
+        <div class="chat-container">
+            <div *ngFor="let message of messages"
+                [ngClass]="message.sender === 'user' ? 'user-message' : 'advisor-message'">
+                {{ message.content }}
+            </div>
         </div>
-    </div>
 
-    <div class="user-input-container">
-        <input type="text" [(ngModel)]="userInput" class="user-input" placeholder="Ask me anything about finance...">
-        <button (click)="askQuestion()" class="ask-button">Ask</button>
+        <div class="user-input-container">
+            <input type="text" [(ngModel)]="userInput" class="user-input"
+                placeholder="Ask me anything about finance...">
+            <button (click)="askQuestion()" class="ask-button">Ask</button>
+        </div>
     </div>
 </div>
