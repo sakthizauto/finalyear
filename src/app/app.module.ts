@@ -17,6 +17,7 @@ import { RouterModule } from '@angular/router';
 import { MarketplaceModule } from './marketplace/marketplace.module';
 import { MyorderComponent } from './myorder/myorder.component';
 import { FeedComponent } from './feed/feed.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FeedComponent } from './feed/feed.component';
     AiAdvisorComponent,
     MyorderComponent,
     FeedComponent,
+    SignupComponent,
 
 
   ],

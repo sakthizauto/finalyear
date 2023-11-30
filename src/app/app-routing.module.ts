@@ -6,7 +6,8 @@ import { DashboardcomponentComponent } from './dashboardcomponent/dashboardcompo
 import { AiAdvisorComponent } from './ai-advisor/ai-advisor.component';
 import { MyorderComponent } from './myorder/myorder.component';
 import { PortfolioComponent } from "./portfolio/portfolio.component";
-import { FeedComponent } from "./feed/feed.component"
+import { FeedComponent } from "./feed/feed.component";
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   {
@@ -30,8 +31,8 @@ const routes: Routes = [
     component: FeedComponent,
     path: 'feed',
   },
-
-
+  { path: 'signup', component: SignupComponent },
+  { path: 'login', component: LoginComponent },
 ];
 
 @NgModule({
