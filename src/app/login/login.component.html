@@ -1,26 +1,23 @@
-<!-- login.component.html -->
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-header">
-                    Login
-                </div>
-                <div class="card-body">
-                    <form (ngSubmit)="login()">
-                        <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" placeholder="Enter your username"
-                                [(ngModel)]="username" name="username" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Enter your password"
-                                [(ngModel)]="password" name="password" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Login</button>
-                    </form>
-                    <p>Don't have an account? <a routerLink="/signup">Sign up</a></p>
+<div class="wrapper" style="color:aqua">
+    <div class="container main" style=" color:rgb(219, 144, 33)">
+        <div class="row">
+            <div class="col-md-6 right">
+                <div class="input-box">
+                    <header>Login to your account</header>
+                    <div class="input-field">
+                        <input type="text" class="input" id="email" [(ngModel)]="email" required="" autocomplete="on">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="input" id="pass" [(ngModel)]="password" required="">
+                        <label for="pass">Password</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="submit" class="submit" value="Login" (click)="onLoginClick()">
+                    </div>
+                    <div class="Login">
+                        <span>I don't have an account <a [routerLink]="['/signup']">Sign Up here</a></span>
+                    </div>
                 </div>
             </div>
         </div>

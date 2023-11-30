@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
+import { LoginService } from "../services/login.service";
 
 @Component({
     selector: "app-login",
@@ -10,34 +11,25 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 
 export class LoginComponent {
-    title = "login"
-    username: string | undefined;
-    password: string | undefined;
-    constructor(private router: Router, private authService: AuthService,) { }
-    login() {
-        // Add your login logic here
-        console.log('Username: ', this.username);
-        console.log('Password: ', this.password);
-        this.authService.login(this.username!, this.password!).subscribe(
+    email: string = '';
+    password: string = '';
+
+    constructor(private loginService: LoginService, private router: Router) { }
+
+    onLoginClick(): void {
+
+        this.loginService.loginasuser(this.email, this.password).subscribe(
+
             (response) => {
-                console.log('Login successful:', response);
-                this.router.navigate(['/dashboard']); // Navigate to dashboard upon successful login
+                console.log('Login successfully:', response);
+                this.router.navigate(['/ai-advisor']);
+
+                // Handle success, e.g., redirect to login page
             },
             (error) => {
-                console.error('Login failed:', error);
+                console.error('Error creating user:', error);
+                // Handle error, e.g., display an error message
             }
         );
-
-
-        // Implement your login logic here (authentication check, etc.)
-        // For simplicity, I'll assume successful login for demonstration purposes
-        const isLoggedIn = true;
-
-        if (isLoggedIn) {
-            // Navigate to the 'buy-sell' page upon successful login
-            this.router.navigate(['/dashboard']);
-        } else {
-            // Handle unsuccessful login (show error message, etc.)
-        }
     }
 }
