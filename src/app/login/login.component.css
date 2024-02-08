@@ -1,0 +1,182 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #282c34; /* Dark background color */
+}
+
+
+/* Wrapper Styles with Background Image */
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: aqua;
+    background: url('../../assets/blacky.jpg') center/cover fixed; /* Replace 'your-background-image.jpg' with your actual background image */
+}
+
+.robot {
+    position: absolute;
+    top: 20px; /* Adjust the top value to position the robot vertically */
+    left: 50%; /* Center the robot horizontally */
+    transform: translateX(-50%); /* Adjust to center the robot using left: 50% */
+    z-index: 2; /* Ensure the robot appears above other elements */
+}
+
+/* Container Styles for Glass Effect */
+.container {
+    background-color: rgba(44, 62, 80, 0.5); /* Semi-transparent card background color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    backdrop-filter: blur(10px); /* Adjust the blur value for the glass effect */
+}
+
+/* Right Column Styles */
+.right {
+    flex: 1;
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+    background-color: #f2f2f218; /* Light background color */
+}
+
+/* Input Box Styles */
+.input-box {
+    color: rgb(232, 232, 232);
+}
+
+/* Header Styles */
+header {
+    color: #eaeaea;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Input Field Styles */
+.input-field {
+    margin-bottom: 15px;
+    position: relative; /* Position relative for absolute positioning of the pseudo-element */
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* White outline */
+    border-radius: 4px;
+    background-color: rgba(51, 51, 51, 0); /* Semi-transparent dark background */
+    color: #fff;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1; /* Ensure the input is above the pseudo-element */
+    outline: none; /* Remove default outline */
+}
+
+/* Hover Effect for Input Fields */
+.input:hover {
+    background-color: rgba(68, 68, 68, 0.8); /* Semi-transparent dark background on hover */
+    border-color: #fff; /* White outline on hover */
+}
+
+/* Shine Effect Animation */
+.input-field:hover::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #fff, transparent, #fff);
+    border-radius: 4px;
+    animation: shine 1s linear infinite; /* Adjust the animation duration and other properties as needed */
+    z-index: 0; /* Place the shine effect below the input */
+}
+
+@keyframes shine {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Label Styles */
+label {
+    color: #f9f9f9; /* Default label color */
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    transition: color 0.3s; /* Add a smooth transition for color change */
+}
+
+/* Hover Effect for Label */
+.input-field:hover label {
+    color: #000; /* Change label color to black on hover */
+}
+
+/* Submit Button Styles */
+.submit {
+    width: 100%; /* Same length as input fields */
+    background-color: #c9d6c93e;
+    color: #fff;
+    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* White outline */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, border-color 0.3s; /* Include border-color in transition */
+}
+
+/* Hover Effect for Submit Button */
+.submit:hover {
+    background-color: #bebebe;
+    transform: scale(1.05);
+    border-color: #fff; /* White outline on hover */
+    color: #000;
+}
+
+/* Signin Text Styles */
+.signin {
+    color: #bbb;
+    margin-top: 15px;
+}
+
+/* Hyperlink Styles */
+a {
+    color: #e1e1e1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hover Effect for Hyperlink */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Add this CSS for the side-image class */
+.side-image{
+    background-color: #f2f2f200;
+    
+}
+
+
+.side-image img {
+    height: 100%;
+    width: 50%;
+    border-radius: 0px;
+    padding-left: 10%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    
+}
+
+
+.row>* {
+    flex-shrink: 0;
+    width: 40%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+}

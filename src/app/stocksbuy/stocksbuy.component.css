@@ -1,0 +1,141 @@
+.stock-card {
+  border: none;
+  border-radius: 10px;
+  padding: 3vw; /* Adjust padding using viewport units */
+  margin-bottom: 2vw; /* Adjust margin using viewport units */
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 2vw 4vw rgba(0, 0, 0, 0.1), 
+    0 3vw 10vw rgba(0, 0, 0, 0.1),
+    0 0 0 2px rgba(255, 255, 255, 0.5); /* Keep the existing outline */
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  width: 46vw; /* Adjust width using viewport units */
+  height: auto; /* Allow height to adjust based on content */
+  backdrop-filter: blur(1vw); /* Adjust blur using viewport units */
+}
+
+/* Add gradient effect for the new outline */
+.stock-card:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.1)); /* Semi-transparent linear gradient from black to white */
+  z-index: -1; /* Ensure the gradient is behind the card content */
+}
+
+/* Apply blur filter only on hover */
+.stock-card:hover {
+  backdrop-filter: blur(2vw); /* Adjust blur using viewport units */
+}
+
+
+
+.stock-card:hover {
+  transform: scale(1.05);
+}
+
+.stock-header {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.stock-header img {
+  width: 10vw; /* Adjust image size using viewport units */
+  height: auto; /* Allow height to adjust based on content */
+  margin-right: 2vw; /* Adjust margin using viewport units */
+}
+
+.stock-title {
+  margin: 0;
+  color: white;
+  font-size: 2vw; /* Adjust font size using viewport units */
+}
+
+.stock-content {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Arrange content vertically */
+  justify-content: space-between; /* Align items with space between */
+  margin-top: 1vw; /* Adjust margin using viewport units */
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+.stock-description {
+  margin-bottom: 1vw; /* Adjust margin using viewport units */
+}
+
+.stock-price {
+  margin-bottom: 1vw; /* Adjust margin using viewport units */
+  font-weight: bold;
+  font-size: 27px; /* Make the price amount bold */
+  margin-left: auto; 
+}
+
+.buy-button {
+  padding: 1vw 2vw; /* Adjust padding using viewport units */
+  font-size: 1.5vw; /* Adjust font size using viewport units */
+  background-color: transparent; /* Transparent background */
+  color: white;
+  border: 2px solid white; /* White border */
+  border-radius: 0.5vw; /* Adjust border radius using viewport units */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.buy-button:hover {
+  background-color: rgba(255, 255, 255, 0.333); /* Change background color on hover */
+  color: #000000; /* Change text color on hover */
+}
+.stocks-container {
+  display: flex;
+  background-image: url('../../assets/blacky.jpg'); /* Replace 'your-background-image-url.jpg' with the URL of your background image */
+  background-size: cover; /* Cover the entire container with the background image */
+  background-position: center; /* Center the background image */
+}
+.stocks-container h3 {
+  font-weight: bold;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+  padding: 10px; /* Add padding for better appearance */
+  border-radius: 10px; /* Add border-radius for rounded corners */
+  margin-top: 20px; /* Add space above the heading */
+  margin-bottom: 20px; /* Add space below the heading */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow behind the text */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow behind the background */
+}
+
+
+.available-stocks-column, .purchased-stocks-column {
+  flex: 1;
+}
+
+.available-stocks-column {
+  margin-right: 2vw; /* Adjust margin-right to create space */
+  margin-left: 2vw; /* Add margin-left to create space from the left margin */
+}
+
+
+body {
+  background-color: #222;
+  color: white;
+}
+.sell-button {
+  padding: 1vw 2vw; /* Adjust padding using viewport units */
+  font-size: 1.5vw; /* Adjust font size using viewport units */
+  background-color: transparent; /* Transparent background */
+  color: white;
+  border: 2px solid white; /* White border */
+  border-radius: 0.5vw; /* Adjust border radius using viewport units */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.sell-button:hover {
+  background-color:  rgba(255, 255, 255, 0.333); /* Change background color on hover */
+  color: #000000; /* Change text color on hover */
+}
+

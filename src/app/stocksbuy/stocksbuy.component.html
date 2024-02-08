@@ -1,0 +1,30 @@
+<div class="stocks-container">
+  <div class="available-stocks-column">
+    <h3>Available Stocks</h3>
+    <div *ngFor="let stock of stocks" class="stock-card">
+      <div class="stock-header">
+        <img [src]="stock.logoUrl" alt="Stock Logo">
+        <h2 class="stock-title">{{ stock.name }}</h2>
+      </div>
+      <div class="stock-content">
+        <p class="stock-description">{{ stock.description }}</p>
+        <p class="stock-price">₹{{ stock.price }}</p> <!-- Add rupees symbol here -->
+        <button class="buy-button" (click)="buyStock(stock)">Buy</button>
+      </div>
+    </div>
+  </div>
+  <div class="purchased-stocks-column">
+    <h3>Purchased Stocks</h3>
+    <div *ngFor="let purchasedStock of purchasedStocks" class="stock-card">
+      <div class="stock-header">
+        <img [src]="purchasedStock.logoUrl" alt="Stock Logo">
+        <h2 class="stock-title">{{ purchasedStock.name }}</h2>
+      </div>
+      <div class="stock-content">
+        <p class="stock-description">{{ purchasedStock.description }}</p>
+        <p class="stock-price">₹{{ purchasedStock.price }}</p> <!-- Add rupees symbol here -->
+        <button class="sell-button" (click)="sellStock(purchasedStock)">Sell</button>
+      </div>
+    </div>
+  </div>
+</div>

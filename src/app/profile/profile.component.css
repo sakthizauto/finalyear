@@ -1,0 +1,153 @@
+.profile-container {
+    background-color: turquoise;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .profile-name {
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .post-section {
+    margin-top: 20px;
+  }
+  
+  .post-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .post-button {
+    padding: 10px 20px;
+    background-color: white;
+    color: turquoise;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .posts {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+  
+  .post-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .post-user-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .post-user-name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .post-content {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .post-actions {
+    margin-top: 10px;
+  }
+  
+  .like-button, .comment-button {
+    padding: 8px 16px;
+    background-color: turquoise;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .like-button:hover, .comment-button:hover {
+    background-color: #33cccc;
+  }
+  
+  .comments-section {
+    margin-top: 10px;
+  }
+  
+  .friends-section {
+    margin-top: 20px;
+  }
+  
+  .section-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+  }
+  
+  .friends-list, .followers-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .friends-list li, .followers-list li {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: white;
+  }
+  
+  .followers-button {
+    padding: 10px 20px;
+    background-color: turquoise;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .followers-list {
+    display: none;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  

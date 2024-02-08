@@ -18,7 +18,8 @@ import { MarketplaceModule } from './marketplace/marketplace.module';
 import { MyorderComponent } from './myorder/myorder.component';
 import { FeedComponent } from './feed/feed.component';
 import { SignupComponent } from './signup/signup.component';
-
+import { StocksBuyComponent } from './stocksbuy/stocksbuy.component';
+import { ProfileComponent } from './profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,8 @@ import { SignupComponent } from './signup/signup.component';
     MyorderComponent,
     FeedComponent,
     SignupComponent,
+    StocksBuyComponent,
+    ProfileComponent,
 
 
   ],

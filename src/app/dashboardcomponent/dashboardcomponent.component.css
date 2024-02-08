@@ -1,0 +1,102 @@
+.stock-market-dashboard-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: url('../../assets/stock.jpg') center/cover; /* Replace with the actual path of your image */
+    color: #fff;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.card {
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.203)),
+                linear-gradient(to bottom right, rgba(255, 255, 255, 0.174), rgba(0, 0, 0, 0)),
+                linear-gradient(to top left, rgba(255, 182, 193, 0), rgba(255, 182, 193, 0)),
+                linear-gradient(to top left, rgba(173, 216, 230, 0), rgba(173, 216, 230, 0));
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: #000; /* Adjust text color as needed */
+    transition: transform 0.3s ease-in-out;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
+    opacity: 0.9; /* Adjust the overall opacity value as needed */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.card-title {
+    font-size: 1.5rem; /* Adjusted font size */
+    font-weight: bold; /* Adjusted font weight */
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adjusted shadow properties */
+}
+
+
+
+.card-text {
+    font-size: 0.9rem; /* Adjusted font size */
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.btn {
+    position: relative;
+    background: #57ebf9c0;
+    color: #343434;
+    border: none;
+    padding: 8px 12px; /* Reduced padding */
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9rem; /* Adjusted font size */
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added box-shadow transition */
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.2); /* Added box-shadow */
+}
+
+.btn:hover {
+    background: #06383e;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 8px 20px rgba(0, 0, 0, 0.3); /* Adjusted box-shadow on hover */
+    color: #fafafa;
+}
+
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    transition: left 0.3s ease-in-out;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.footer-container {
+    padding: 10px 0;
+}
+
+.router-outlet {
+    display: block;
+    margin-top: 20px;
+}
+
+.display-4 {
+    font-weight: bold;
+    font-style: italic; /* Adjust as needed for elegance */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust shadow properties as needed */
+    /* Additional styles for elegance can be added here */
+}

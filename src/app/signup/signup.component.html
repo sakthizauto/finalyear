@@ -1,19 +1,20 @@
-<div class="wrapper" style="color:aqua">
-    <div class="container main" style=" color:rgb(219, 144, 33)">
+<div class="wrapper" style="color: aqua">
+    <div class="container main" style="color: rgb(219, 144, 33)">
         <div class="row">
             <div class="col-md-6 side-image">
-
+                <!-- Replace this placeholder with the robot image -->
+                <img src="../../assets/robot.png" alt="Robot Image">
             </div>
             <div class="col-md-6 right">
                 <div class="input-box">
                     <header>Create account as User</header>
                     <div class="input-field">
-                        <input type="text" class="input" [(ngModel)]="email" required autocomplete="on">
                         <label for="email">Email</label>
+                        <input type="text" class="input" [(ngModel)]="email" required autocomplete="on">
                     </div>
                     <div class="input-field">
-                        <input type="password" class="input" [(ngModel)]="password" required autocomplete="on">
                         <label for="pass">Password</label>
+                        <input type="password" class="input" [(ngModel)]="password" required autocomplete="on">
                     </div>
                     <div class="input-field">
                         <button class="submit" (click)="signupasuser()">Sign Up</button>
