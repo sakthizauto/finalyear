@@ -1,30 +1,53 @@
-.container {
+body {
+    background-color: #40e0d0; /* Turquoise Blue */
+    margin: 0; /* Remove default body margin */
+    font-family: 'Arial', sans-serif; /* Add a preferred font-family */
+    color: white; /* Set text color to white */
+}
+
+.stock-container,
+.portfolio-container {
     display: flex;
+    background: url('../../assets/stock.jpg') center/cover; /* Replace with the actual path of your image */
+    position: relative;
+    background-size: cover; /* Ensure the background image covers the entire container */
 }
 
-.left-side {
-    flex: 1;
-    /* This will make the left side take up as much space as possible */
-    padding: 10px;
-    /* Add padding as needed */
-}
-
-.right-side {
-    flex: 1;
-    /* This will make the right side take up as much space as possible */
-    padding: 10px;
-    /* Add padding as needed */
+.left-side,
+.right-side,
+.btn,
+h1,
+p,
+.card-title,
+.card-text,
+.display-4 {
+    color: white; /* Set text color to white */
 }
 
 img {
     height: 50px;
-    color: black;
+    color: white; /* Set text color to white */
 }
 
 .chatbot-icon {
     position: absolute;
     bottom: 10px;
-    /* Adjust as needed */
     right: 10px;
-    /* Adjust as needed */
+}
+
+.btn {
+    background: #3498db;
+    color: white; /* Set text color to white */
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #2980b9;
 }

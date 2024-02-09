@@ -1,8 +1,14 @@
 /* feed.component.css */
+
+/* ... (your existing styles) ... */
+
 .feed-container {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 20px 20px 0; /* Adjust margins as needed */
     padding: 20px;
+    background-color: #f5f5f5; /* Light Gray Background */
+    display: flex;
+    flex-direction: column;
 }
 
 .post-form {
@@ -13,6 +19,14 @@
     border: 1px solid #ddd;
     margin-bottom: 20px;
     padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.post:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .post-header {
@@ -21,15 +35,58 @@
     margin-bottom: 10px;
 }
 
+.user-profile img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
 .username {
     font-weight: bold;
-    margin-right: 10px;
 }
 
 .post-content {
     font-size: 16px;
 }
 
-img {
-    height: 100px;
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/* Added styles for the like button */
+.post-actions button.like-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.post-actions button.like-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.post-actions button.like-button.liked {
+    background-color: #fff;
+    color: #3498db;
+    background-image: url('../../assets/heart.png'); /* Replace with the path to your heart icon SVG */
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px; /* Hide the text visually */
+}
+
+.post-actions button.like-button:hover {
+    background-color: #2980b9;
 }

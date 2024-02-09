@@ -8,6 +8,8 @@ import { MyorderComponent } from './myorder/myorder.component';
 import { PortfolioComponent } from "./portfolio/portfolio.component";
 import { FeedComponent } from "./feed/feed.component";
 import { SignupComponent } from './signup/signup.component';
+import { StocksBuyComponent } from './stocksbuy/stocksbuy.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {
@@ -33,6 +35,10 @@ const routes: Routes = [
   },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
+  {
+    path:'stocksbuy', component: StocksBuyComponent
+  },
+  { path: 'profile', component: ProfileComponent },
 ];
 
 @NgModule({

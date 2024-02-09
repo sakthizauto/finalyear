@@ -1,21 +1,19 @@
 <!-- feed.component.html -->
-<!-- feed.component.html -->
 <div class="feed-container">
     <!-- Form for creating a new post -->
     <form (submit)="submitPost()" class="post-form">
         <div class="user-profile">
-            <img src="{{ userProfile.picture }}" alt="Profile Picture">
+            <img [src]="userProfile.picture" alt="Profile Picture">
             <input type="text" [(ngModel)]="newPost.text" name="text" placeholder="What's on your mind?" required>
             <button type="submit">Post</button>
         </div>
-
     </form>
 
     <!-- Display posts -->
-    <div *ngFor="let post of posts" class="post" [@fadeInOut]="post.liked ? 'in' : 'out'">
+    <div *ngFor="let post of posts" class="post" [@fadeInOut]="post.showAnimation ? 'in' : 'out'">
         <div class="post-header">
             <div class="user-profile">
-                <img src="{{ post.userProfile.picture }}" alt="Profile Picture">
+                <img [src]="post.userProfile.picture" alt="Profile Picture">
                 <p class="username">{{ post.userProfile.username }}</p>
             </div>
         </div>
@@ -23,8 +21,26 @@
             <p>{{ post.text }}</p>
         </div>
         <div class="post-actions">
-            <button (click)="likePost(post)">Like</button>
+            <button (click)="likePost(post)" class="like-button" [class.liked]="post.liked">
+                Like
+                <div class="heart-animation" *ngIf="post.showHeart"></div>
+            </button>
             <button (click)="commentOnPost(post)">Comment</button>
+        </div>
+        <!-- Comments section -->
+        <div class="comments-section">
+            <div *ngFor="let comment of post.comments" class="comment">
+                <div class="comment-user-profile">
+                    <img [src]="comment.user.picture" alt="Profile Picture">
+                    <p class="comment-username">{{ comment.user.username }}</p>
+                </div>
+                <p>{{ comment.text }}</p>
+            </div>
+        </div>
+        <!-- Input field for adding a comment -->
+        <div class="add-comment-section">
+            <input type="text" [(ngModel)]="newComment" placeholder="Add a comment...">
+            <button (click)="addComment(post, newComment)">Add Comment</button>
         </div>
     </div>
 </div>

@@ -22,6 +22,7 @@ export class FeedComponent {
 
   posts: any[] = [];
   newPost: any = {};
+  newComment: string = ''; // Added for the new comment input field
 
   submitPost() {
     // Add the new post to the posts array along with user profile
@@ -30,12 +31,13 @@ export class FeedComponent {
       userProfile: { username: this.userProfile.username, picture: this.userProfile.picture },
       liked: false,
       showAnimation: true,
+      comments: [], // Initialize comments array for the post
     });
 
     // Clear the new post object for the next post
     this.newPost = {};
-
   }
+
   likePost(post: any) {
     // Implement your logic for liking a post
     console.log(`Liked post with text: ${post.text}`);
@@ -45,5 +47,15 @@ export class FeedComponent {
   commentOnPost(post: any) {
     // Implement your logic for commenting on a post
     console.log(`Commented on post with text: ${post.text}`);
+  }
+
+  addComment(post: any, newComment: string) {
+    // Implement logic to add a new comment to the post
+    post.comments.push({
+      text: newComment,
+      user: { username: this.userProfile.username, picture: this.userProfile.picture }
+    });
+    // Clear the new comment input field
+    this.newComment = '';
   }
 }

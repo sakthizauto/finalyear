@@ -1,29 +1,33 @@
-<div class="wrapper" style="color:aqua">
-    <div class="container main" style=" color:rgb(219, 144, 33)">
+<div class="wrapper" style="color: aqua">
+    <div class="container main" style="color: rgb(219, 144, 33)">
         <div class="row">
             <div class="col-md-6 side-image">
-                <!-------------      image     ------------->
-                <!-- <img src="https://w0.peakpx.com/wallpaper/799/204/HD-wallpaper-farmers-agriculture-field-harvesting-farm-farmer-hard-working-workers-cultivation.jpg" alt="image"> -->
-                <!-- <div class="text">
+                <<<<<<< HEAD <!------------- image ------------->
+                    <!-- <img src="https://w0.peakpx.com/wallpaper/799/204/HD-wallpaper-farmers-agriculture-field-harvesting-farm-farmer-hard-working-workers-cultivation.jpg" alt="image"> -->
+                    <!-- <div class="text">
             <p>Join the community of developers <i>- ludiflex</i></p>
           </div> -->
+                    =======
+                    <img src="" alt="Login Image">
+                    >>>>>>> 9bfb2d934e836eb705cc4e64d28715dc926e784c
             </div>
             <div class="col-md-6 right">
                 <div class="input-box">
                     <header>Login to your account</header>
                     <div class="input-field">
-                        <input type="text" class="input" id="email" [(ngModel)]="email" required="" autocomplete="on">
                         <label for="email">Email</label>
+                        <input type="text" class="input" id="email" [(ngModel)]="email" required="" autocomplete="on">
                     </div>
                     <div class="input-field">
-                        <input type="password" class="input" id="pass" [(ngModel)]="password" required="">
                         <label for="pass">Password</label>
+                        <input type="password" class="input" id="pass" [(ngModel)]="password" required="">
                     </div>
                     <div class="input-field">
-                        <input type="submit" class="submit" value="Login" (click)="onLoginClick()">
+                        <input type="submit" class="submit" value="Login" [routerLink]="['/dashboard']">
+                        <!-- (click)="onLoginClick()"> -->
                     </div>
                     <div class="Login">
-                        <span>I don't have an account <a [routerLink]="['/signup']">Sign Up here</a></span>
+                        <span>I don't have an account <a [routerLink]="['/signin']">Sign Up here</a></span>
                     </div>
                 </div>
             </div>

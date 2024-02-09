@@ -1,21 +1,22 @@
-<div class="container">
+<div class="stock-container">
     <div class="left-side">
         <app-stock-list [stocks]="stocks" (buyStock)="buyStock($event)"></app-stock-list>
     </div>
+</div>
+
+<div class="portfolio-container">
     <div class="right-side">
         <app-portfolio [portfolio]="portfolio"></app-portfolio>
     </div>
-    <div class="chatbot-icon">
-        <!-- You can place your chatbot icon here -->
-
-
-        <a routerLink="/ai-advisor" class="btn">
-
-            <img src="./assets/chatbot.png" alt="Chatbot Icon">
-        </a>
-
-    </div>
 </div>
+
+<div class="chatbot-icon">
+    <!-- Your chatbot icon content here -->
+    <a routerLink="/ai-advisor" class="btn">
+        <img src="./assets/chatbot.png" alt="Chatbot Icon">
+    </a>
+</div>
+
 <div class="row mt-5">
     <div class="col-md-12">
         <router-outlet></router-outlet>
