@@ -3,16 +3,45 @@
 
         <h1>Financial Insights Chat</h1>
 
-        <div class="chat-container">
+        <!-- <div class="chat-container">
             <div *ngFor="let message of messages"
                 [ngClass]="message.sender === 'user' ? 'user-message' : 'advisor-message'">
                 {{ message.content }}
             </div>
+        </div> -->
+        <div class="chat-container">
+            <div *ngFor="let message of messages"
+                [ngClass]="message.sender === 'user' ? 'user-message' : 'advisor-message'">
+                <ng-container *ngIf="isTableContent(message.content); else regularMessage">
+                    <!-- If the message content is in table format -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Value (in INR)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let row of message.content">
+                                <td>{{ row[0] }}</td>
+                                <td>{{ row[1] }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </ng-container>
+                <ng-template #regularMessage>
+                    <!-- If the message content is not in table format -->
+                    {{ message.content }}
+                </ng-template>
+            </div>
         </div>
 
+
+
+
+
         <div class="user-input-container">
-            <input type="text" [(ngModel)]="userInput" class="user-input"
-                placeholder="Ask me anything about finance...">
+            <input type="text" [(ngModel)]="userInput" class="user-input" placeholder="TYPE THE STOCK NAME..">
             <button (click)="askQuestion()" class="ask-button">Ask</button>
         </div>
     </div>

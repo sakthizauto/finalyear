@@ -18,6 +18,7 @@ export class LoginComponent {
 
     onLoginClick(): void {
 
+        this.router.navigate(['/dashboard']);
         this.loginService.loginasuser(this.email, this.password).subscribe(
 
             (response) => {

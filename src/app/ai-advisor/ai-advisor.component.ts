@@ -38,6 +38,14 @@ export class AiAdvisorComponent {
     // Clear the input field
     this.userInput = '';
   }
+  isTableContent(content: any): boolean {
+    if (Array.isArray(content) && content.length > 0 && Array.isArray(content[0])) {
+      // Check if it's an array of rows, where each row is an array of cells
+      return true;
+    }
+    return false;
+  }
+
 }
 
 

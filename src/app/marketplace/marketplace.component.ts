@@ -5,6 +5,7 @@ import { Stock } from 'src/app/models/models';
 import { StockListComponent } from 'src/app/stock-list/stock-list.component';
 import { PortfolioComponent } from 'src/app/portfolio/portfolio.component';
 import { RouterLink } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -27,11 +28,23 @@ export class marketplaceComponent {
     // Add more stocks as needed
   ];
 
-
+  constructor(private http: HttpClient) { }
   portfolio: Stock[] = [];
 
   buyStock(stock: Stock) {
     // Add the selected stock to the portfolio
+    const userId = 'user123'
     this.portfolio.push({ ...stock, quantity: 1 });
+    this.http.post('/api/buy-stock', { stock, userId }).subscribe(
+      (response) => {
+        console.log('Stock purchased successfully:', response);
+        // You might want to update the UI or perform other actions here
+      },
+      (error) => {
+        console.error('Error purchasing stock:', error);
+        // Handle errors here
+      }
+    );
   }
 }
+
